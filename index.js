@@ -1,4 +1,4 @@
-// begin working here 
+
 const main = () => document.querySelector("#main")
 const form = () => document.querySelector("#new-blog-form")
 const h1 = () => document.querySelector("#page-title")
