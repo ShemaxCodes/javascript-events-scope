@@ -43,14 +43,14 @@
 // WITH FUNCTIONS
 // Example 1
 
-let myName = "I am global";
-const printName = () => console.log(myName)
+// let myName = "I am global";
+// const printName = () => console.log(myName)
 
-const newPrintName = () => {
-    let myName = "Luigi"
-    printName()
-}
-newPrintName();
+// const newPrintName = () => {
+//     let myName = "Luigi"
+//     printName()
+// }
+// newPrintName();
 
 // => I am global
 
