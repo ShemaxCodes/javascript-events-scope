@@ -59,7 +59,11 @@ const handleShowBlogsClick = (e) => {
 
 const handleSubmit = (e) => {
     e.preventDefault();
-    debugger
+    blogs.push({
+        title: titleInput().value,
+        content: contentInput().value
+    })
+   
 }
 
 document.addEventListener("DOMContentLoaded", () => {
