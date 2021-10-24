@@ -54,7 +54,7 @@ const handleShowFormClick = (e) => {
 
 const handleShowBlogsClick = (e) => {
     e.preventDefault();
-    main().innerHTML = blogsTemplate();
+        showBlogs()
 }
 
 const handleSubmit = (e) => {
@@ -67,7 +67,9 @@ const handleSubmit = (e) => {
 }
 const showBlogs = () => {
     main().innerHTML = blogsTemplate();
+    if (blogsList()) {
     blogs.forEach(blog => renderBlog(blog))
+    }
 }
 
 const renderBlog = (blog) => {
