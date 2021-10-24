@@ -63,8 +63,27 @@ const handleSubmit = (e) => {
         title: titleInput().value,
         content: contentInput().value
     })
-   
+   showBlogs();
 }
+const showBlogs = () => {
+    main().innerHTML = blogsTemplate();
+    blogs.forEach(blog => renderBlog(blog))
+}
+
+const renderBlog = (blog) => {
+    const li = document.createElement("li");
+    const h3 = document.createElement("h3");
+    // hey, h3 your text will be the blogs title
+    h3.innerHTML = blog.title;
+    h3.className = "blog-title";
+    const p = document.createElement("p");
+    p.innerHTML = blog.content;
+    p.className = "blog-content";
+    li.appendChild(h3);
+    li.appendChild(p);
+    blogsList().appendChild(li)
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
     showFormButton().addEventListener("click", handleShowFormClick);
