@@ -1,6 +1,7 @@
 const blogs  = [];
-/* const is not meant to be reassigned. we're only pushing 
-posts inside of the array. the array itself won't change.
+/* const is not meant to be reassigned. but we're using it
+here because we're only pushing posts inside of the array. 
+the array itself won't change(name of the array).
 */
 const main = () => document.querySelector("#main")
 const form = () => document.querySelector("#new-blog-form")
