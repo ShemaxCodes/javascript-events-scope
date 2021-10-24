@@ -1,4 +1,7 @@
-
+const blogs  = [];
+/* const is not meant to be reassigned. we're only pushing 
+posts inside of the array. the array itself won't change.
+*/
 const main = () => document.querySelector("#main")
 const form = () => document.querySelector("#new-blog-form")
 const h1 = () => document.querySelector("#page-title")
@@ -43,7 +46,9 @@ const blogsTemplate = () => {
 const handleShowFormClick = (e) => {
     e.preventDefault();
     main().innerHTML = formTemplate();
+    if (form()) {
     form().addEventListener("submit", handleSubmit)
+    }
 }
 
 const handleShowBlogsClick = (e) => {
