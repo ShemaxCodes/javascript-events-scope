@@ -43,11 +43,17 @@ const blogsTemplate = () => {
 const handleShowFormClick = (e) => {
     e.preventDefault();
     main().innerHTML = formTemplate();
+    form().addEventListener("submit", handleSubmit)
 }
 
 const handleShowBlogsClick = (e) => {
     e.preventDefault();
     main().innerHTML = blogsTemplate();
+}
+
+const handleSubmit = (e) => {
+    e.preventDefault();
+    debugger
 }
 
 document.addEventListener("DOMContentLoaded", () => {
